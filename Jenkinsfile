@@ -1,9 +1,10 @@
 pipeline {
-    agent any 
+    agent any
     stages {
-        stage('Clone') {
+        stage('Checkout') {
             steps {
-                git "https://github.com/HieuTech/demo-jenkin-pipeline.git"
+                git branch: 'main', 
+                    url: 'https://github.com/HieuTech/demo-jenkin-pipeline.git'
             }
         }
     }
